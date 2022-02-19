@@ -12,8 +12,13 @@ async function getJoke(){
     });
 
     const joke = await receivedJoke.json();
-
-    jokeEl.innerHTML = joke.joke;
+    const newjoke = joke.joke;
+    if(newjoke.length >100){
+        getJoke();
+    }
+    else {
+        jokeEl.innerHTML = newjoke;
+    }
 
     
 
