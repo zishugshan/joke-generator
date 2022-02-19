@@ -3,8 +3,6 @@ const jokeBtn = document.querySelector(".btn");
 
 jokeBtn.addEventListener("click",getJoke);
 
-getJoke();
-
 async function getJoke(){
     // call api
     const receivedJoke = await fetch("https://icanhazdadjoke.com",{
